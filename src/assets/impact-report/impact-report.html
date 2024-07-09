@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://padcare.s3.ap-southeast-1.amazonaws.com/fonts/stylesheet.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .gotham-bold {
+        font-family: 'Gotham';
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      body {
+        margin: 0;
+        color: #666666;
+        font-family: 'Gotham';
+        font-weight: normal;
+        font-style: normal;
+        background-color: #fff5e9;
+        font-size: 20px;
+        line-height: 20px;
+      }
+      main {
+        padding: 70px 25px 0 25px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .title {
+        font-family: 'League Spartan', sans-serif;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .color-red {
+        color: #c8161b;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .flex-wrapper {
+        display: flex;
+      }
+
+      @media print {
+        @page {
+          size: 26.458333333cm 54.239583333cm;
+          height: 100%;
+          margin: 0;
+        }
+
+        @page:left {
+          margin: 0;
+        }
+        @page:right {
+          margin: 0;
+        }
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
+
+        main {
+          padding: 1.8520833333cm 0.6614583333cm 0 0.6614583333cm;
+        }
+
+        .page {
+          page-break-before: always;
+          height: 100%;
+          position: relative;
+        }
+
+        .page:first-of-type {
+          page-break-before: avoid;
+        }
+
+        .page > footer {
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          padding-top: 1.3229166667cm;
+          padding-bottom: 1.0583333333cm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page page-1">
+      <main>
+        <div style="padding-bottom: 56px">
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/logo.png"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 275px"
+          />
+        </div>
+        <div
+          class="page-banner flex-wrapper"
+          style="
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 8px solid #c8161b;
+          "
+        >
+          <div style="width: 650px; padding-bottom: 70px">
+            <h1
+              class="color-red title bold"
+              style="
+                font-size: 77px;
+                line-height: 77px;
+                margin-top: 0;
+                margin-bottom: 20px;
+              "
+            >
+              Impact Report
+            </h1>
+            <div class="color-red" style="font-size: 41px; line-height: 41px">
+              Q4 - {{startMonth}} - {{endMonth}} | {{year}}
+            </div>
+            <h2
+              class="gotham-bold"
+              style="font-size: 42px; line-height: 60px; margin: 0"
+            >
+              {{clientName}}
+            </h2>
+            <p
+              style="
+                font-size: 31px;
+                line-height: 43px;
+                margin: 0;
+                text-align: justify;
+                max-width: 580px;
+              "
+            >
+              Presenting your journey of saving the world from sanitary waste
+              with PadCare.
+            </p>
+          </div>
+          <div style="width: 225px; padding-right: 60px">
+            <img
+              src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/bitmap.png"
+              title="Impact Report"
+              alt="Impact Report"
+              style="width: 225px"
+            />
+          </div>
+        </div>
+        <div class="roadmap" style="position: relative">
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/flow.svg"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 420px; margin: 0 auto; display: block"
+          />
+          <div
+            style="
+              position: absolute;
+              width: 250px;
+              top: 100px;
+              left: 150px;
+              text-align: center;
+            "
+          >
+            <div
+              class="color-red title bold"
+              style="font-size: 50px; line-height: 43px"
+            >
+              {{pads_collected}}
+            </div>
+            <div
+              class="color-red title bold"
+              style="font-size: 23px; line-height: 23px"
+            >
+              pads collected
+            </div>
+            <p style="margin: 5px 0 0; font-size: 22px; line-height: 24px">
+              from the padcare bins in your lavatories
+            </p>
+          </div>
+          <div
+            style="
+              position: absolute;
+              width: 310px;
+              top: 355px;
+              right: 120px;
+              text-align: center;
+            "
+          >
+            <div
+              class="color-red title bold"
+              style="font-size: 50px; line-height: 43px"
+            >
+              {{material_processed_kg}}
+            </div>
+            <div
+              class="color-red title bold"
+              style="font-size: 23px; line-height: 23px"
+            >
+              kg material processed
+            </div>
+            <p style="margin: 5px 0 0; font-size: 22px; line-height: 24px">
+              at padcare recycling station
+            </p>
+          </div>
+          <div
+            style="
+              position: absolute;
+              width: 370px;
+              top: 670px;
+              left: 75px;
+              text-align: center;
+            "
+          >
+            <div
+              class="color-red title bold"
+              style="font-size: 50px; line-height: 43px"
+            >
+              {{landfill_area_saved_liters}}
+            </div>
+            <div
+              class="color-red title bold"
+              style="font-size: 23px; line-height: 23px"
+            >
+              Litres landfill area saved
+            </div>
+            <p style="margin: 5px 0 0; font-size: 22px; line-height: 24px">
+              by redirecting the waste to make paper from its recycled output
+            </p>
+          </div>
+          <div style="padding-top: 20px; text-align: center">
+            <div
+              class="color-red title bold"
+              style="font-size: 50px; line-height: 43px"
+            >
+              {{carbon_equivalents_conserved_kg}}
+            </div>
+            <div class="color-red" style="font-size: 28px; line-height: 24px">
+              kg carbon equivalents conserved
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-wrapper"
+          style="gap: 10px; justify-content: center; margin-top: 30px"
+        >
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/3.svg"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 83px"
+          />
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/5.svg"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 83px"
+          />
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/6.svg"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 83px"
+          />
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/11.svg"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 83px"
+          />
+          <img
+            src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/13.svg"
+            title="Impact Report"
+            alt="Impact Report"
+            style="width: 83px"
+          />
+        </div>
+      </main>
+      <footer
+        class="gotham-bold text-center"
+        style="font-size: 22px; padding: 40px 0"
+      >
+        www.padcarelabs.com | 9022822458
+      </footer>
+    </div>
+    <div class="page page-2">
+      <main style="padding-top: 90px">
+        <h3
+          class="color-red title bold"
+          style="
+            font-size: 52px;
+            line-height: 60px;
+            max-width: 500px;
+            margin: 0;
+          "
+        >
+          Things we made from the collected pads
+        </h3>
+        <p style="margin: 10px 0 20px; font-size: 26px; line-height: 32px">
+          Upholding our commitment to making sanitary waste planet-friendly, we
+          made some heartfelt stationery products with 100% safe-to-use output
+          extracted from the sanitary pads we collected from your workplace.
+        </p>
+        <h4
+          class="title bold"
+          style="margin: 0; font-size: 31px; line-height: 32px"
+        >
+          Available at discounted prices for all our clients.
+        </h4>
+        <div class="" style="margin: 50px 65px 0">
+          <div
+            class="flex-wrapper"
+            style="align-items: center; gap: 40px; margin-bottom: -90px"
+          >
+            <img
+              src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/0-1.png"
+              title="Impact Report"
+              alt="Impact Report"
+              style="width: 380px"
+            />
+            <div>
+              <div style="font-size: 31px; line-height: 31px">
+                Positivity on-the-go
+              </div>
+              <div
+                class="color-red title bold"
+                style="font-size: 42px; line-height: 42px; margin-top: 5px"
+              >
+                Affirmation Station
+              </div>
+              <p style="margin: 10px 0 20px; opacity: 0.7; text-align: justify">
+                Designed to inspire peace, ease, and joy within you and those
+                you love.
+              </p>
+              <div class="flex-wrapper" style="margin-bottom: 5px">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Size
+                </div>
+                <div style="opacity: 0.7">7.4 x 10.5 cm</div>
+              </div>
+              <div class="flex-wrapper">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Pages
+                </div>
+                <div style="opacity: 0.7">31</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex-wrapper"
+            style="
+              align-items: center;
+              gap: 56px;
+              margin-bottom: -90px;
+              justify-content: flex-end;
+            "
+          >
+            <div>
+              <div style="font-size: 31px; line-height: 31px">
+                Dried-flowers inspired
+              </div>
+              <div
+                class="color-red title bold"
+                style="font-size: 42px; line-height: 42px; margin-top: 5px"
+              >
+                Notebook
+              </div>
+              <p style="margin: 10px 0 20px; opacity: 0.7; text-align: justify">
+                Your own little space to manifest your ideas and dreams or just
+                an outlet to let your creativity flow.
+              </p>
+              <div class="flex-wrapper" style="margin-bottom: 5px">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Size
+                </div>
+                <div style="opacity: 0.7">10.5 x 14.8 cm</div>
+              </div>
+              <div class="flex-wrapper">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Pages
+                </div>
+                <div style="opacity: 0.7">20</div>
+              </div>
+            </div>
+            <img
+              src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/0-2.png"
+              title="Impact Report"
+              alt="Impact Report"
+              style="width: 380px"
+            />
+          </div>
+          <div
+            class="flex-wrapper"
+            style="align-items: center; gap: 56px; margin-bottom: -90px"
+          >
+            <img
+              src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/0-3.png"
+              title="Impact Report"
+              alt="Impact Report"
+              style="width: 380px"
+            />
+            <div>
+              <div style="font-size: 31px; line-height: 31px">
+                Strawberry-inspired
+              </div>
+              <div
+                class="color-red title bold"
+                style="font-size: 42px; line-height: 42px; margin-top: 5px"
+              >
+                Mini-calendar
+              </div>
+              <p style="margin: 10px 0 20px; opacity: 0.7; text-align: justify">
+                Cherish the year 2023 and keep tab on your days, weeks, and
+                months.
+              </p>
+              <div class="flex-wrapper" style="margin-bottom: 5px">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Size
+                </div>
+                <div style="opacity: 0.7">5.2 x 7.4 cm</div>
+              </div>
+              <div class="flex-wrapper">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Pages
+                </div>
+                <div style="opacity: 0.7">12</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex-wrapper"
+            style="align-items: center; gap: 56px; justify-content: flex-end"
+          >
+            <div>
+              <div style="font-size: 31px; line-height: 31px">
+                Vintage Typewriter
+              </div>
+              <div
+                class="color-red title bold"
+                style="font-size: 42px; line-height: 42px; margin-top: 5px"
+              >
+                To-do List
+              </div>
+              <p style="margin: 10px 0 20px; opacity: 0.7; text-align: justify">
+                Classic abode for documenting tasks, meetings reminders, and
+                bucket lists
+              </p>
+              <div class="flex-wrapper" style="margin-bottom: 5px">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Size
+                </div>
+                <div style="opacity: 0.7">7.4 x 21.1cm</div>
+              </div>
+              <div class="flex-wrapper">
+                <div class="gotham-bold" style="width: 80px; opacity: 0.86">
+                  Pages
+                </div>
+                <div style="opacity: 0.7">30</div>
+              </div>
+            </div>
+            <img
+              src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/0-4.png"
+              title="Impact Report"
+              alt="Impact Report"
+              style="width: 380px"
+            />
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="gotham-bold text-center"
+        style="font-size: 22px; padding: 40px 0"
+      >
+        www.padcarelabs.com | 9022822458
+      </footer>
+    </div>
+  </body>
+</html>

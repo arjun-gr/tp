@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://padcare.s3.ap-southeast-1.amazonaws.com/fonts/stylesheet.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .gotham-bold {
+        font-family: 'Gotham';
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      body {
+        margin: 0;
+        color: #666666;
+        font-family: 'Gotham';
+        font-weight: normal;
+        font-style: normal;
+        background-color: #fff5e9;
+        font-size: 16px;
+      }
+      .page-wrapper {
+        padding: 15px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .title {
+        font-family: 'League Spartan', sans-serif;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .color-red {
+        color: #c8161b;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .flex {
+        display: flex;
+      }
+      /* For border style */
+      .outer {
+        overflow: hidden;
+      }
+      .inner {
+        border: 7px solid #888;
+        height: 100%;
+      }
+      .inner i {
+        width: 120px;
+        height: 120px;
+        border: 7px solid #888;
+        border-radius: 50%;
+        background-color: #fff5e9;
+      }
+      .inner .top {
+        margin-top: -70px;
+      }
+      .inner .bottom {
+        margin-top: -70px;
+        margin-bottom: -70px;
+      }
+      .inner .left {
+        float: left;
+        margin-left: -70px;
+      }
+      .inner .right {
+        float: right;
+        margin-right: -70px;
+      }
+      @media print {
+        @page {
+          size: 26.458333333cm 29.9cm;
+          height: 100%;
+          margin: 0;
+        }
+
+        @page:left {
+          margin: 0;
+        }
+        @page:right {
+          margin: 0;
+        }
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
+        .content > footer {
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 85px;
+          width: 100%;
+          padding-top: 1.3229166667cm;
+          padding-bottom: 1.0583333333cm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="outer">
+        <div class="inner">
+          <i class="top left"></i>
+          <i class="top right"></i>
+          <div class="content" style="padding: 72px 72px 60px 72px">
+            <main>
+              <div
+                class="page-banner flex"
+                style="
+                  justify-content: space-between;
+                  align-items: flex-start;
+                  padding-bottom: 45px;
+                "
+              >
+                <div>
+                  <div style="padding-bottom: 35px; padding-top: 20px">
+                    <img
+                      src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/logo.png"
+                      title="Impact Report"
+                      alt="Impact Report"
+                      style="width: 186px"
+                    />
+                  </div>
+                  <h1
+                    class="color-red title bold"
+                    style="
+                      font-size: 80px;
+                      line-height: 62px;
+                      margin-top: 0;
+                      margin-bottom: 25px;
+                    "
+                  >
+                    <span style="font-size: 56px; opacity: 0.37"
+                      >Certificate of</span
+                    ><br />Recycling
+                  </h1>
+                </div>
+                <img
+                  src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/recycling_bitmap.png"
+                  title="Impact Report"
+                  alt="Impact Report"
+                  style="width: 240px"
+                />
+              </div>
+              <div
+                class="color-red bold"
+                style="font-size: 22px; margin-bottom: 12px"
+              >
+                {{date}}
+              </div>
+              <div style="font-size: 18px; margin-bottom: 12px">
+                This is to officially acknowledge that sanitary pads from
+              </div>
+              <div class="bold" style="font-size: 34px; margin-bottom: 12px">
+                {{clientName}}
+              </div>
+              <p
+                style="
+                  margin: 0 0 10px 0;
+                  line-height: 24px;
+                  text-align: justify;
+                "
+              >
+                were received by PadCare Labs for processing and recycling. The
+                transportation, receipt, storage, and processing methods
+                involved are all in accordance with latest CPCB and SWM 2016
+                rules, as well as all other applicable central, state, and local
+                laws.
+              </p>
+              <p
+                style="
+                  margin: 0 0 10px 0;
+                  line-height: 24px;
+                  text-align: justify;
+                "
+              >
+                All sanitary pads collected from the organization have been
+                recycled at PadCare's recycling station and turned into
+                safe-to-use cellulose & plastic.
+              </p>
+
+              <p style="margin: 0; line-height: 24px; text-align: justify">
+                We congratulate {{clientName}} on their effort to save the
+                planet and make their campus washrooms safer for women. Together
+                we have created a substantial environmental impact.
+              </p>
+              <div
+                style="
+                  margin-top: 25px;
+                  margin-bottom: 35px;
+                  font-size: 18px;
+                  font-weight: bold;
+                "
+              >
+                Certificate valid from {{contractStartDate}} to
+                {{contractEndDate}}
+              </div>
+              <div
+                class="flex"
+                style="justify-content: space-between; align-items: center"
+              >
+                <div>
+                  <div
+                    style="
+                      font-size: 21px;
+                      font-weight: bold;
+                      font-family: Raleway;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Certificate Issued to:
+                  </div>
+                  {{#if logo}}
+                  <img
+                    src="{{logo}}"
+                    title="Impact Report"
+                    alt="Impact Report"
+                    style="width: 188px"
+                  />
+                  {{/if}}
+
+                  <div
+                    style="
+                      margin-top: 20px;
+                      font-size: 15px;
+                      line-height: 20px;
+                      width: 300px;
+                      word-wrap: break-word;
+                    "
+                  >
+                    {{address}}
+                  </div>
+                </div>
+                <div class="text-center" style="width: 150px">
+                  <img
+                    src="https://padcare.s3.ap-southeast-1.amazonaws.com/img/recycling_stamp.png"
+                    title="Impact Report"
+                    alt="Impact Report"
+                    style="width: 89px"
+                  />
+                  <div
+                    style="
+                      margin-top: 10px;
+                      font-size: 11px;
+                      line-height: 16px;
+                      border-top: 2px solid #666666;
+                      padding-top: 15px;
+                    "
+                  >
+                    <div class="bold" style="font-size: 15px">
+                      Ajinkya Dhariya
+                    </div>
+                    <div style="font-size: 14px">
+                      Founder and CEO<br />PadCare Labs
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+
+            <footer
+              class="text-center color-red"
+              style="font-size: 15px; padding: 15px 0 0"
+            >
+              Certificate #PCL/Recycling/PCLR6000
+            </footer>
+          </div>
+          <i class="bottom right"></i>
+          <i class="bottom left"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
